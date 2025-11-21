@@ -8,15 +8,9 @@ import 'swiper/css/effect-coverflow'
 
 import gallery1 from '../assets/images/1.jpg'
 import gallery2 from '../assets/images/2.jpg'
-import gallery3 from '../assets/images/3.jpg'
-import gallery4 from '../assets/images/4.jpg'
 import gallery5 from '../assets/images/5.jpg'
 import gallery6 from '../assets/images/6.jpg'
 import gallery7 from '../assets/images/7.jpg'
-import gallery8 from '../assets/images/8.jpg'
-import gallery9 from '../assets/images/9.jpg'
-import gallery10 from '../assets/images/10.jpg'
-import gallery11 from '../assets/images/11.jpg'
 import gallery12 from '../assets/images/12.jpg'
 import gallery13 from '../assets/images/13.jpg'
 
@@ -27,15 +21,9 @@ function Gallery () {
   const engagementPhotos = [
     { id: 1, image: gallery1 },
     { id: 2, image: gallery2 },
-    { id: 3, image: gallery3 },
-    { id: 4, image: gallery4 },
     { id: 5, image: gallery5 },
     { id: 6, image: gallery6 },
     { id: 7, image: gallery7 },
-    { id: 8, image: gallery8 },
-    { id: 9, image: gallery9 },
-    { id: 10, image: gallery10 },
-    { id: 11, image: gallery11 },
     { id: 12, image: gallery12 },
     { id: 13, image: gallery13 }
   ];
