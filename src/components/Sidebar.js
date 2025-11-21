@@ -66,7 +66,7 @@ function Sidebar () {
                 </a>
               </li>
               <li className='menu-item'>
-                <a href='#heartfelt' onClick={closeMenu}>
+                <a href='#bestwishes' onClick={closeMenu}>
                   <span className='menu-icon'><i className='ti-gift'></i></span>
                   <span className='menu-text'>Heartfelt Shoutouts</span>
                 </a>
