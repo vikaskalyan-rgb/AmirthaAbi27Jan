@@ -50,7 +50,7 @@ function Sidebar () {
               <li className='menu-item'>
                 <a href='#organization' onClick={closeMenu}>
                   <span className='menu-icon'><i className='ti-map'></i></span>
-                  <span className='menu-text'>Vivaha Vaibhavam</span>
+                  <span className='menu-text'>Vivaha Subhamuhurtham</span>
                 </a>
               </li>
               <li className='menu-item'>
@@ -63,6 +63,12 @@ function Sidebar () {
                 <a href='#gallery' onClick={closeMenu}>
                   <span className='menu-icon'><i className='ti-gallery'></i></span>
                   <span className='menu-text'>Engagement Gallery</span>
+                </a>
+              </li>
+              <li className='menu-item'>
+                <a href='#heartfelt' onClick={closeMenu}>
+                  <span className='menu-icon'><i className='ti-gift'></i></span>
+                  <span className='menu-text'>Heartfelt Shoutouts</span>
                 </a>
               </li>
                <li className='menu-item'>

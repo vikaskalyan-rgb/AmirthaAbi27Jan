@@ -807,6 +807,7 @@ body.slide .oliven-nav-toggle {
     #16213e 50%,
     #1a1a2e 100%
   );
+  padding: 80px 20px; 
 }
 
 /* Elegant Sparkle Background - MATCHING! */
@@ -848,6 +849,7 @@ body.slide .oliven-nav-toggle {
   position: relative;
   z-index: 2;
   padding-top: 50px;
+  max-width: 1400px;  
 }
 
 /* Sacred Chant */
@@ -881,9 +883,9 @@ body.slide .oliven-nav-toggle {
 
 /* DARK GLASS CARD - MATCHING THEME */
 .hero-content {
-  max-width: 950px;
+  max-width: 1100px;  /* INCREASED from 950px */
   margin: 0 auto;
-  padding: 75px 55px;
+  padding: 65px 60px;  /* INCREASED padding */
   background: rgba(30, 30, 50, 0.65);
   backdrop-filter: blur(40px) saturate(180%);
   -webkit-backdrop-filter: blur(40px) saturate(180%);
@@ -895,7 +897,6 @@ body.slide .oliven-nav-toggle {
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
   position: relative;
   transition: all 0.5s ease;
-  overflow: visible;  /* CHANGED from hidden to visible */
 }
 
 /* Shimmer Effect */
@@ -1163,9 +1164,9 @@ body.slide .oliven-nav-toggle {
 .event-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 25px;  /* INCREASED from 22px */
   margin: 45px 0;
-  max-width: 720px;
+  max-width: 1100px;  /* INCREASED from 720px */
   margin-left: auto;
   margin-right: auto;
 }
@@ -1181,12 +1182,12 @@ body.slide .oliven-nav-toggle {
 }
 
 .event-card-inner {
-  background: rgba(30, 30, 50, 0.4);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(30, 30, 50, 0.15);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(218, 165, 105, 0.25);
   border-radius: 25px;
-  padding: 35px 25px;
+  padding: 40px 30px;  /* INCREASED from 35px 25px */
   min-height: 230px;
   display: flex;
   flex-direction: column;
@@ -1194,7 +1195,7 @@ body.slide .oliven-nav-toggle {
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
 .event-card-inner::before {
@@ -1364,14 +1365,19 @@ body.slide .oliven-nav-toggle {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .header {
+    padding: 60px 15px;
+  }
   .header .container {
-    padding-top: 35px;
+    max-width: 100%;
+    padding: 35px 15px;
   }
   
   .hero-content {
-    padding: 52px 38px;
+    padding: 52px 35px;
     margin-top: 15px;
     border-radius: 38px;
+    max-width: 100%;
   }
   
   .name-text {
@@ -1384,17 +1390,22 @@ body.slide .oliven-nav-toggle {
   
   .event-cards {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
+    max-width: 100%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .hero-content {
-    padding: 45px 30px;
+  .header {
+    padding: 40px 10px;
   }
   
-  .name-text {
-    font-size: 52px;
+  .hero-content {
+    padding: 40px 25px;
+  }
+  
+  .event-card-inner {
+    padding: 35px 25px;
   }
 }
 
@@ -2781,11 +2792,11 @@ body.slide .oliven-nav-toggle {
     transform: translate(-50%, -50%) scale(1.2);
   }
 }
-
 /* ======= LUXURIOUS DARK WEDDING INVITATION SECTION ======= */
 /* Deep Navy & Charcoal with Rose Gold & Champagne Accents */
 
 .organization {
+  padding: 100px 30px;
   background: linear-gradient(
     180deg,
     #1a1a2e 0%,
@@ -2814,6 +2825,7 @@ body.slide .oliven-nav-toggle {
   background-size: 100% 100%, 100% 100%, 200px 200px, 300px 300px, 250px 250px, 280px 280px;
   pointer-events: none;
   animation: sparkle 8s ease-in-out infinite;
+  z-index: 0;
 }
 
 @keyframes sparkle {
@@ -2822,6 +2834,9 @@ body.slide .oliven-nav-toggle {
 }
 
 .organization .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
   position: relative;
   z-index: 1;
 }
@@ -2840,16 +2855,15 @@ body.slide .oliven-nav-toggle {
   position: relative;
   padding-bottom: 20px;
   margin-bottom: 60px;
-  text-shadow: 0 0 30px rgba(218, 165, 105, 0.4);
   animation: titleGlow 3s ease-in-out infinite;
 }
 
 @keyframes titleGlow {
   0%, 100% {
-    filter: brightness(1);
+    filter: brightness(1.2);
   }
   50% {
-    filter: brightness(1.2);
+    filter: brightness(1.5);
   }
 }
 
@@ -2900,6 +2914,27 @@ body.slide .oliven-nav-toggle {
     0 20px 60px rgba(218, 165, 105, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.ceremony-item:nth-child(1) { animation-delay: 0.1s; }
+.ceremony-item:nth-child(2) { animation-delay: 0.2s; }
+.ceremony-item:nth-child(3) { animation-delay: 0.3s; }
+.ceremony-item:nth-child(4) { animation-delay: 0.4s; }
+.ceremony-item:nth-child(5) { animation-delay: 0.5s; }
+.ceremony-item:nth-child(6) { animation-delay: 0.6s; }
+.ceremony-item:nth-child(7) { animation-delay: 0.7s; }
+.ceremony-item:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .ceremony-item:hover {
@@ -2962,20 +2997,24 @@ body.slide .oliven-nav-toggle {
   order: 1;
 }
 
-/* Image Wrapper */
+/* Image Wrapper - SQUARE */
 .ceremony-image-wrapper {
   position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;  /* PERFECT SQUARE */
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 
     0 15px 45px rgba(0, 0, 0, 0.6),
     0 0 40px rgba(218, 165, 105, 0.2);
+  margin: 0 auto;
 }
 
 .ceremony-image {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover;  /* ENSURES SQUARE CROP */
   display: block;
   transition: transform 0.6s ease, filter 0.6s ease;
   border-radius: 20px;
@@ -3055,11 +3094,11 @@ body.slide .oliven-nav-toggle {
   filter: drop-shadow(0 0 30px rgba(218, 165, 105, 0.8));
 }
 
-/* Translate Button - Champagne Gold - Positioned separately */
+/* Translate Button - Champagne Gold */
 .invitation-translate-btn {
   position: absolute;
-  top: 28px;     /* moved slightly down */
-  right: 28px;   /* moved slightly left */
+  top: 28px;
+  right: 28px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -3187,12 +3226,22 @@ body.slide .oliven-nav-toggle {
   }
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
 @media screen and (max-width: 992px) {
+  .organization {
+    padding: 80px 25px;
+  }
+  
+  .organization .container {
+    padding: 0 20px;
+  }
+  
   .ceremony-item {
     grid-template-columns: 1fr !important;
     gap: 30px;
-    padding: 30px;
+    padding: 35px;
   }
   
   .ceremony-item:nth-child(even) .ceremony-image-wrapper,
@@ -3200,8 +3249,9 @@ body.slide .oliven-nav-toggle {
     order: unset;
   }
   
-  .ceremony-image {
-    height: 350px;
+  .ceremony-image-wrapper {
+    max-width: 100%;
+    width: 100%;
   }
   
   .oliven-title-meta {
@@ -3218,41 +3268,57 @@ body.slide .oliven-nav-toggle {
     padding-right: 45px;
   }
   
-  .invitation-translate-btn {
-    width: 34px;
-    height: 34px;
-    font-size: 12px;
+  .ceremony-description {
+    font-size: 15px;
   }
 }
 
+/* Mobile - WIDER LAYOUT */
 @media screen and (max-width: 768px) {
+  .organization {
+    padding: 60px 20px;  /* REDUCED side padding */
+  }
+  
+  .organization .container {
+    padding: 0 10px;  /* REDUCED side padding */
+    max-width: 100%;
+  }
+  
   .ceremonies-list {
-    gap: 40px;
+    gap: 35px;
+    padding: 10px 0;
   }
   
   .ceremony-item {
-    padding: 25px;
+    padding: 30px 20px;  /* REDUCED side padding */
     border-radius: 25px;
     background: rgba(30, 30, 50, 0.75);
+    gap: 25px;
   }
   
   .ceremony-header {
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  
+  .ceremony-image-wrapper {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 18px;
   }
   
   .ceremony-image {
-    height: 300px;
+    border-radius: 18px;
   }
   
   .oliven-title-meta {
-    font-size: 32px;
+    font-size: 34px;
     margin-bottom: 40px;
   }
   
   .ceremony-number {
-    font-size: 42px;
-    max-width: 60px;
+    font-size: 44px;
+    max-width: 65px;
   }
   
   .ceremony-title {
@@ -3262,38 +3328,64 @@ body.slide .oliven-nav-toggle {
   
   .ceremony-description {
     font-size: 15px;
+    line-height: 1.7;
+  }
+  
+  .ceremony-text {
+    padding: 15px 5px;
   }
   
   .invitation-translate-btn {
+    top: 22px;
+    right: 22px;
     width: 32px;
     height: 32px;
     font-size: 11px;
   }
 }
 
+/* Small Mobile - EVEN WIDER */
 @media screen and (max-width: 480px) {
+  .organization {
+    padding: 50px 15px;  /* FURTHER REDUCED */
+  }
+  
+  .organization .container {
+    padding: 0 5px;  /* MINIMAL padding */
+  }
+  
+  .ceremonies-list {
+    gap: 30px;
+  }
+  
   .ceremony-item {
-    padding: 20px;
-    gap: 25px;
+    padding: 25px 15px;  /* REDUCED for more space */
+    gap: 20px;
     background: rgba(30, 30, 50, 0.8);
+    border-radius: 20px;
   }
   
   .ceremony-header {
     gap: 15px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .ceremony-image-wrapper {
+    border-radius: 15px;
   }
   
   .ceremony-image {
-    height: 250px;
+    border-radius: 15px;
   }
   
   .oliven-title-meta {
-    font-size: 28px;
+    font-size: 30px;
+    margin-bottom: 35px;
   }
   
   .ceremony-number {
-    font-size: 36px;
-    max-width: 50px;
+    font-size: 40px;
+    max-width: 55px;
   }
   
   .ceremony-title {
@@ -3304,50 +3396,47 @@ body.slide .oliven-nav-toggle {
   .ceremony-description {
     font-size: 14px;
     text-align: left;
+    line-height: 1.6;
   }
   
   .ceremony-text {
-    padding: 10px;
+    padding: 10px 5px;
   }
   
   .invitation-translate-btn {
-    top: 18px;   /* previously 10px */
+    top: 18px;
     right: 18px;
     width: 30px;
     height: 30px;
     font-size: 10px;
   }
-}
-
-/* Smooth Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .title-underline {
+    width: 50px;
+    margin-bottom: 15px;
   }
 }
 
-.ceremony-item {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.ceremony-item:nth-child(1) { animation-delay: 0.1s; }
-.ceremony-item:nth-child(2) { animation-delay: 0.2s; }
-.ceremony-item:nth-child(3) { animation-delay: 0.3s; }
-.ceremony-item:nth-child(4) { animation-delay: 0.4s; }
-.ceremony-item:nth-child(5) { animation-delay: 0.5s; }
-.ceremony-item:nth-child(6) { animation-delay: 0.6s; }
-.ceremony-item:nth-child(7) { animation-delay: 0.7s; }
-.ceremony-item:nth-child(8) { animation-delay: 0.8s; }
-
-/* Enhanced Glass Effect */
-@media (prefers-reduced-motion: no-preference) {
+/* Extra Small Screens */
+@media screen and (max-width: 360px) {
+  .organization {
+    padding: 40px 10px;
+  }
+  
+  .organization .container {
+    padding: 0;
+  }
+  
   .ceremony-item {
-    will-change: transform, background, box-shadow;
+    padding: 20px 12px;
+  }
+  
+  .ceremony-title {
+    font-size: 20px;
+  }
+  
+  .ceremony-description {
+    font-size: 13px;
   }
 }
 
@@ -4025,8 +4114,8 @@ body.slide .oliven-nav-toggle {
 }
 
 @media screen and (max-width: 480px) {
-  .whenwhere {
-    padding: 60px 0;
+   .header {
+    padding: 40px 10px;
   }
   
   .section-title {
@@ -6360,5 +6449,383 @@ body:hover .floating-flower {
     width: 36px;
     height: 36px;
     font-size: 15px;
+  }
+}
+/* ======= HEARTFELT BEST WISHES SECTION ======= */
+/* Dark Navy & Sparkles with Champagne Gold Accents */
+
+.best-wishes {
+  background: linear-gradient(
+    180deg,
+    #1a1a2e 0%,
+    #16213e 50%,
+    #1a1a2e 100%
+  );
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+/* Elegant Sparkle Background - MATCHING! */
+.best-wishes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(218, 165, 105, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(236, 169, 188, 0.06) 0%, transparent 50%),
+    radial-gradient(2px 2px at 15% 45%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(2px 2px at 85% 25%, rgba(218, 165, 105, 0.5), transparent),
+    radial-gradient(1px 1px at 45% 75%, rgba(255, 255, 255, 0.3), transparent);
+  background-size: 100% 100%, 100% 100%, 200px 200px, 300px 300px, 250px 250px;
+  pointer-events: none;
+  animation: sparkle 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.best-wishes .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Section */
+.wishes-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.wishes-subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #DAA569, #ECA9BC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.wishes-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #E8BF95 0%, #DAA569 50%, #ECA9BC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  margin: 0 0 25px 0;
+  transition: all 0.4s ease;
+  filter: brightness(1.3) drop-shadow(0 0 30px rgba(218, 165, 105, 0.6));
+  animation: titleShimmer 3s ease-in-out infinite;
+}
+
+@keyframes titleShimmer {
+  0%, 100% {
+    filter: brightness(1.3) drop-shadow(0 0 30px rgba(218, 165, 105, 0.6));
+  }
+  50% {
+    filter: brightness(1.5) drop-shadow(0 0 40px rgba(218, 165, 105, 0.8));
+  }
+}
+
+/* Title Divider */
+.wishes-title-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.divider-line {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(218, 165, 105, 0.5)
+  );
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(218, 165, 105, 0.3);
+}
+
+.divider-line:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(218, 165, 105, 0.5),
+    transparent
+  );
+}
+
+.divider-icon {
+  background: linear-gradient(135deg, #DAA569, #ECA9BC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px;
+  animation: heartbeat 2s infinite ease-in-out;
+  filter: drop-shadow(0 0 15px rgba(218, 165, 105, 0.6));
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14%, 42% {
+    transform: scale(1.2);
+  }
+  28%, 56% {
+    transform: scale(1);
+  }
+}
+
+/* Wishes Grid */
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Wish Card - Dark Glass */
+.wish-card {
+  background: rgba(30, 30, 50, 0.65);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border-radius: 25px;
+  border: 1px solid rgba(218, 165, 105, 0.25);
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.6),
+    0 20px 60px rgba(218, 165, 105, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.wish-card:nth-child(1) { animation-delay: 0.1s; }
+.wish-card:nth-child(2) { animation-delay: 0.2s; }
+.wish-card:nth-child(3) { animation-delay: 0.3s; }
+.wish-card:nth-child(4) { animation-delay: 0.4s; }
+.wish-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shimmer Effect */
+.wish-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg, 
+    transparent 30%,
+    rgba(218, 165, 105, 0.3) 50%,
+    rgba(236, 169, 188, 0.3) 55%,
+    transparent 70%
+  );
+  background-size: 300% 300%;
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: shimmerMove 8s ease-in-out infinite;
+}
+
+@keyframes shimmerMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.wish-card:hover::before {
+  opacity: 1;
+}
+
+.wish-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.7),
+    0 30px 90px rgba(218, 165, 105, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  border-color: rgba(218, 165, 105, 0.45);
+}
+
+/* Wish Icon */
+.wish-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px;
+  background: rgba(218, 165, 105, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(218, 165, 105, 0.3);
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(218, 165, 105, 0.2);
+}
+
+.wish-card:hover .wish-icon {
+  background: rgba(218, 165, 105, 0.25);
+  border-color: rgba(218, 165, 105, 0.5);
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 10px 30px rgba(218, 165, 105, 0.4);
+}
+
+.wish-icon i {
+  font-size: 32px;
+  background: linear-gradient(135deg, #E8BF95, #DAA569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 15px rgba(218, 165, 105, 0.5));
+}
+
+/* Wish Name */
+.wish-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #E8BF95, #DAA569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6));
+}
+
+.wish-card:hover .wish-name {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 20px rgba(218, 165, 105, 0.5));
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .best-wishes {
+    padding: 80px 0;
+  }
+  
+  .wishes-title {
+    font-size: 38px;
+  }
+  
+  .wishes-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .wish-card {
+    padding: 35px 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .best-wishes {
+    padding: 60px 0;
+  }
+  
+  .wishes-title {
+    font-size: 32px;
+  }
+  
+  .wish-card {
+    padding: 30px 20px;
+  }
+  
+  .wish-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .wish-icon i {
+    font-size: 28px;
+  }
+  
+  .wish-name {
+    font-size: 20px;
+  }
+}
+/* Wish Image Wrapper - Replaces Icon */
+.wish-image-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 25px;
+  background: rgba(218, 165, 105, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(218, 165, 105, 0.3);
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(218, 165, 105, 0.2);
+  overflow: hidden;
+  padding: 5px;
+}
+
+.wish-card:hover .wish-image-wrapper {
+  border-color: rgba(218, 165, 105, 0.6);
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 10px 30px rgba(218, 165, 105, 0.4);
+}
+
+.wish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.wish-card:hover .wish-image {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .wish-image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wish-image-wrapper {
+    width: 90px;
+    height: 90px;
   }
 }

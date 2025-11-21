@@ -9,6 +9,7 @@ import Story from './components/Story';
 import Where from './components/Where';
 import RSVP from './components/RSVP';
 import Gallery from './components/Gallery';
+import BestWishes from './components/BestWishes';
 
 
 function App() {
@@ -22,8 +23,8 @@ function App() {
       <Organization />
       <Story />
       <Gallery/>
+      <BestWishes/>
         <Countdown />
-        
         <Where />
          <Footer />
         
